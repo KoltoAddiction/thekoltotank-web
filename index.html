@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+        <link href="styles/style.css" rel="stylesheet">
+        <link href="styles/index.css" rel="stylesheet">
+        <script src="source/scripts/index.js"></script>
+        <link rel="icon" href="assets/favicon-32x32.png">
+        <title>The Kolto Tank</title>
+    </head>
+    <body>
+        <div class="screen" id="indexScreen">
+            <img src="assets/scanlines.png" id="scan" class="noselect">
+            <div class="content" id="indexContent">
+                <div class="header">
+
+                </div>
+
+                <div id="welcome">
+                    <h1 id="welcomeText">good morning.</h1>
+                    <h3 id="date">today is Thursday, January 1, 1970</h3>
+                    <h3 id="time">the time is 00:00 (midnight)</h3>
+                </div>
+
+                <div id="weather"> 
+                    <div id="forecast"></div>
+                    <div id="additionalWeather">
+                        <div id="daylight">
+                            <div class="additionalSub">
+                                <img src="assets/sunrise.png" class="weather-icon">
+                                <h1 id="sunriseTime">00:00</h1>
+                            </div>
+                            <div class="additionalSub">
+                                <img src="assets/sunset.png" class="weather-icon">
+                                <h1 id="sunsetTime">00:00</h1>
+                            </div>
+                            <div class="additionalSub">
+                                <img src="assets/daylight.png" class="weather-icon">
+                                <h1 id="daylightTime">00:00</h1>
+                            </div>
+                            <div class="additionalSub">
+                                <img src="assets/sunlight.png" class="weather-icon">
+                                <h1 id="sunlightTime">00:00</h1>
+                            </div>
+                        </div>
+                        <div id="tempsAndUV">
+                            <div class="additionalSub">
+                                <img src="assets/max-temp.png" class="weather-icon">
+                                <h1 id="maxTemp">0&deg;F</h1>
+                            </div>
+                            <div class="additionalSub">
+                                <img src="assets/min-temp.png" class="weather-icon">
+                                <h1 id="minTemp">0&deg;F</h1>
+                            </div>
+                            <div class="additionalSub">
+                                <img src="assets/weather-icons/0.png" class="weather-icon" id="dayWeatherCodeImg">
+                                <h1 id="dayWeatherCodeName">clear skies</h1>
+                            </div>
+                            <div class="additionalSub">
+                                <img src="assets/uv.png" class="weather-icon">
+                                <h1 id="uvLevel">0</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="attributions">
+                    <p>&copy; KoltoAddiction - All Rights Reserved.</p>
+                    <a href="https://www.flaticon.com/free-icons/" title="icons">Weather icons created by Freepik - Flaticon</a>
+                </div>
+
+                <div class="footer">
+
+                </div>
+            
+            </div>
+        </div>
+    </body>
+</html>

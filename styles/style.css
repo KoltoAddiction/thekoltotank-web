@@ -1,0 +1,105 @@
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+
+html {
+    background-color: black;
+}
+
+.screen{
+    overflow: hidden;
+    display:grid;
+    width: 100%;
+    height: 200vh;
+    transform-origin: center;
+    position: absolute;
+    box-shadow: 0 0 200px rgba(0,0,0,1) inset;
+}
+
+#scan{
+    position: absolute;
+    width:100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 10;
+    opacity: 50%;
+    height: 300%;
+    animation: slide 60s linear infinite;
+}
+
+.content{
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    height: 200vh;
+}
+.content * {
+    font-weight: 100;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+.header img, h1, span, input {
+    float: left;
+    text-align: center;
+    font-size: 5rem;
+    line-height: 40px;
+    border-radius: 4px;
+}
+
+.header-right {
+    float: right;
+}
+
+.footer {
+    font-size: 1.5rem;
+    position: absolute;
+    bottom: 32px;
+}
+
+
+@keyframes slide {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(0, -50%, 0);
+    }
+}
+
+a {
+  color: inherit;        /* make it use the same color as surrounding text */
+  text-decoration: none; /* remove underline */
+  font-weight: inherit;  /* match surrounding text weight */
+}
+
+.attributions {
+    bottom: 0;
+    position: absolute;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.attributions * {
+    margin: 0;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 8px;
+}

@@ -53,7 +53,6 @@ async function loadForecast(lat, lon) {
     const dayCode = data.daily.weather_code;
 
     for (let i = 0; i < times.length; i++) {
-        if (!times[i].startsWith(today)) continue; // only today's hours
 
         const hour = getTime(times[i]);
 

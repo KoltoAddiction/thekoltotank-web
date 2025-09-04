@@ -34,14 +34,14 @@
 }
 
 #weather{
-    padding-top: 52.5vh;
+    padding-top: clamp(40vh, 30vw, 52.5vh);
     width: 90vw;
     padding-left:5vw;
     padding-right:5vw;
     padding-bottom:17vh;
     display: flex;
     flex-direction: column;
-    gap: 10vh;
+    gap: clamp(5vh, 10vw, 10vh);
 }
 
 #weather * {
@@ -148,8 +148,8 @@
 @media (max-width: 1200px) {
   #additionalWeather {
     flex-direction: column; /* stack vertically */
-    padding-top: 20vh;
-    padding-bottom: 20vh;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
     align-items: stretch;
   }
   .weather-icon {

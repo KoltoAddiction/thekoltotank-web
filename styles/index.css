@@ -8,7 +8,7 @@
 }
 
 #welcome {
-    width: 100%;
+    width: calc(100%-80px);
     padding-top: 30vh;
     left: 50%;
     transform: translate(0, 0);
@@ -19,14 +19,17 @@
 }
 
 #welcome h1 {
-    font-size: 8rem;
+    font-size: clamp(2rem, 12vw, 8rem);
     padding: 0;
     padding-bottom: 3rem;
     margin: 0;
 }
 #welcome h3 {
-    font-size: 2rem;
+    font-size: clamp(1.75rem, 5vw, 2rem);
     padding: 0;
+    padding-right: 50px;
+    padding-left: 50px;
+    text-align: center;
     margin: 0;
 }
 
@@ -35,9 +38,15 @@
     width: 90vw;
     padding-left:5vw;
     padding-right:5vw;
+    padding-bottom:17vh;
     display: flex;
     flex-direction: column;
     gap: 10vh;
+}
+
+#weather * {
+    transform: inherit;
+    transform-origin: inherit;
 }
 
 #forecast {
@@ -97,6 +106,7 @@
     padding: 0;
     margin: 0;
 }
+
 .forecast-icon {
     padding-top: 16px;
     padding-right: 32px;
@@ -109,8 +119,10 @@
     flex-direction: row;
     width: 100%;
     justify-content: center;
+    align-items: center;
     gap: 10vh;
     height: 30vh;
+
 }
 
 #daylight, #tempsAndUV {
@@ -126,9 +138,29 @@
     flex-direction:row;
     gap: 15px;
     align-items: center;
-    justify-content: left;
+    justify-content: center;
     width: 100%;
 }
 .additionalSub * {
     text-align: left;
 }
+
+@media (max-width: 1200px) {
+  #additionalWeather {
+    flex-direction: column; /* stack vertically */
+    padding-top: 20vh;
+    padding-bottom: 20vh;
+    align-items: stretch;
+  }
+  .weather-icon {
+    width: clamp(5rem, 5vw, 8rem);
+    height: clamp(5rem, 5vw, 8rem);
+  }
+  .additionalSub h1 {
+    font-size: clamp(1.75rem, 5vw, 3rem);
+  }
+  #daylight, #tempsAndUV {
+    width: auto;
+  }
+}
+
